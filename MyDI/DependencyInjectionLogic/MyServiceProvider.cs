@@ -21,15 +21,15 @@ public class MyServiceProvider
     {
         _services.Add(typeof(ServiceType), new ServiceModel(typeof(ImplementionType), LifeTimes.singelton));
     }
-    public void AddTransiant<ServiceType>(ServiceType serviceType)
+    public void AddTransient<ServiceType>(ServiceType serviceType)
     {
         _services.Add(typeof(ServiceType), new ServiceModel(serviceType, LifeTimes.transient));
     }
-    public void AddTransiant<ServiceType>()
+    public void AddTransient<ServiceType>()
     {
         _services.Add(typeof(ServiceType), new ServiceModel(typeof(ServiceType), LifeTimes.transient));
     }
-    public void AddTransiant<ServiceType, ImplementionType>() where ImplementionType : ServiceType
+    public void AddTransient<ServiceType, ImplementionType>() where ImplementionType : ServiceType
     {
         _services.Add(typeof(ServiceType), new ServiceModel(typeof(ImplementionType), LifeTimes.transient));
     }

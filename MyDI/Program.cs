@@ -8,8 +8,8 @@ var serviceProvider = new MyServiceProvider();
 
 // serviceProvider.AddSingelton(new DateTimeProvider());
 //serviceProvider.AddSingelton<IGuidProvider, GuidProvider>();
-serviceProvider.AddTransiant<IGuidProvider, GuidProvider>();
-//serviceProvider.AddTransiant<GuidGenerator>();
+serviceProvider.AddTransient<IGuidProvider, GuidProvider>();
+//serviceProvider.AddTransient<GuidGenerator>();
 
 serviceProvider.AddSingelton<IGuidGenerator, GuidGenerator>();
 
